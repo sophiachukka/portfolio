@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sophia Chukka | Portfolio</title>
+    <title>Sophia Chukka | Data Analyst Portfolio</title>
     <meta
       name="description"
-      content="Personal portfolio for Your Name, featuring selected work, skills, experience, and contact links."
+      content="Data and Business Analytics portfolio for Sophia Chukka, featuring analyst projects, visualizations, certifications, and awards."
     >
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -17,9 +17,10 @@
         <span>Sophia Chukka</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#visualizations">Visuals</a>
         <a href="#skills">Skills</a>
-        <a href="#about">About</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -29,124 +30,250 @@
         <img class="hero-image" src="hero-workspace.png" alt="">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow">Portfolio</p>
-          <h1>Sophia Chukka</h1>
+          <p class="eyebrow">Data & Business Analytics Portfolio</p>
+          <h1>Hi, I'm Sophia.</h1>
           <p class="hero-lede">
-            I design and build practical digital experiences that turn messy ideas into polished,
-            useful products.
+            Data & Business Analytics graduate turning datasets into dashboards, insights, and
+            business decisions.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#work">View work</a>
-            <a class="button secondary" href="mailto:sophia05@vt.edu">Email me</a>
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="#visualizations">See visuals</a>
+            <a class="button secondary" href="https://github.com/sophiachukka">GitHub</a>
           </div>
         </div>
       </section>
 
-      <section class="intro band">
-        <div>
-          <p class="section-kicker">What I Do</p>
-          <h2>Focused, reliable work across product, design, and code.</h2>
+      <section class="snapshot section" aria-label="Analyst snapshot">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Analyst Snapshot</p>
+            <h2>Evidence-first work with measurable outcomes.</h2>
+          </div>
+          <p>
+            A quick view of the analysis, modeling, and storytelling highlights that recruiters can
+            scan fast.
+          </p>
         </div>
-        <p>
-          Replace this with a short personal summary: what you do, who you help, and what makes
-          your work valuable. Keep it specific and confident.
-        </p>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span class="metric-value">396</span>
+            <span class="metric-label">Biomedical research records analyzed</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-value">86%</span>
+            <span class="metric-label">LLM classification accuracy benchmark</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-value">8,000+</span>
+            <span class="metric-label">MOF structures processed for analysis</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-value">Award</span>
+            <span class="metric-label">Best Visuals recognition at ASA DataFest</span>
+          </article>
+        </div>
       </section>
 
-      <section id="work" class="section">
+      <section id="projects" class="section project-section">
         <div class="section-heading">
-          <p class="section-kicker">Selected Work</p>
-          <h2>Projects</h2>
+          <div>
+            <p class="section-kicker">Featured Analyst Projects</p>
+            <h2>Case studies built around business questions.</h2>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Product Design</span>
-              <span>2026</span>
+        <div class="case-study-grid">
+          <article class="case-card">
+            <div class="case-visual">
+              <span>FINLAB</span>
+              <div class="mini-bars" aria-hidden="true">
+                <i style="height: 48%"></i>
+                <i style="height: 70%"></i>
+                <i style="height: 92%"></i>
+                <i style="height: 62%"></i>
+              </div>
             </div>
-            <h3>Client Dashboard</h3>
-            <p>
-              A focused dashboard concept for tracking customer activity, surfacing alerts, and
-              helping teams act faster.
-            </p>
-            <a href="#" aria-label="Open Client Dashboard project">View project</a>
+            <div class="case-content">
+              <p class="project-meta">Research Analytics · Python · SQL</p>
+              <h3>FINLAB Research</h3>
+              <p>
+                Analyzed biomedical research data to identify patterns, classify records, and
+                communicate findings for decision-making.
+              </p>
+              <dl>
+                <div><dt>Problem</dt><dd>Turn complex research data into clear analytical evidence.</dd></div>
+                <div><dt>Insight</dt><dd>Classification and summary metrics made the dataset easier to evaluate.</dd></div>
+              </dl>
+              <div class="case-links">
+                <a href="#">GitHub</a>
+                <a href="#">Case study</a>
+              </div>
+            </div>
           </article>
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Web App</span>
-              <span>2025</span>
+
+          <article class="case-card">
+            <div class="case-visual">
+              <span>NLP</span>
+              <div class="mini-line" aria-hidden="true"></div>
             </div>
-            <h3>Scheduling Tool</h3>
-            <p>
-              A responsive tool that simplifies booking, availability, and reminders for busy
-              independent professionals.
-            </p>
-            <a href="#" aria-label="Open Scheduling Tool project">View project</a>
+            <div class="case-content">
+              <p class="project-meta">NLP Capstone · Python · Scikit-learn</p>
+              <h3>Census Bureau NLP Capstone</h3>
+              <p>
+                Built text classification workflows using TF-IDF, Naive Bayes, and LLM evaluation
+                to compare performance.
+              </p>
+              <dl>
+                <div><dt>Dataset</dt><dd>Public-sector text records and labeled categories.</dd></div>
+                <div><dt>Impact</dt><dd>Created a repeatable approach for routing text into usable groups.</dd></div>
+              </dl>
+              <div class="case-links">
+                <a href="#">GitHub</a>
+                <a href="#">Demo</a>
+              </div>
+            </div>
           </article>
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Brand System</span>
-              <span>2025</span>
+
+          <article class="case-card">
+            <div class="case-visual">
+              <span>MOF</span>
+              <div class="mini-dots" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
             </div>
-            <h3>Launch Kit</h3>
-            <p>
-              A compact visual system with reusable page sections, clear messaging, and assets for
-              a small business launch.
-            </p>
-            <a href="#" aria-label="Open Launch Kit project">View project</a>
+            <div class="case-content">
+              <p class="project-meta">CarbonQapture · Data Processing · Visualization</p>
+              <h3>CarbonQapture</h3>
+              <p>
+                Processed thousands of materials records to support exploration of carbon capture
+                structures and performance patterns.
+              </p>
+              <dl>
+                <div><dt>Dataset</dt><dd>8,000+ MOF structures prepared for analysis.</dd></div>
+                <div><dt>Output</dt><dd>Cleaned data views and visuals for technical comparison.</dd></div>
+              </dl>
+              <div class="case-links">
+                <a href="#">GitHub</a>
+                <a href="#">Dashboard</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="visualizations" class="section visual-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Visualization Gallery</p>
+            <h2>Dashboards, charts, and KPI storytelling.</h2>
+          </div>
+          <p>
+            Replace these preview panels with screenshots from Tableau, Power BI, Python notebooks,
+            or SQL reports.
+          </p>
+        </div>
+        <div class="visual-grid">
+          <article class="visual-card wide">
+            <div class="chart-header">
+              <span>Project impact snapshot</span>
+              <strong>0-100</strong>
+            </div>
+            <div class="bar-chart" aria-label="Example project impact chart">
+              <div><span style="height: 88%"></span><small>FINLAB</small></div>
+              <div><span style="height: 86%"></span><small>Census NLP</small></div>
+              <div><span style="height: 74%"></span><small>CarbonQapture</small></div>
+              <div><span style="height: 68%"></span><small>Finance</small></div>
+              <div><span style="height: 61%"></span><small>SQL KPI</small></div>
+            </div>
+          </article>
+          <article class="visual-card">
+            <p class="project-meta">Tableau / Power BI</p>
+            <h3>Executive Dashboard</h3>
+            <p>Use this for a screenshot showing KPIs, filters, trends, and business summary.</p>
+          </article>
+          <article class="visual-card">
+            <p class="project-meta">Python Charts</p>
+            <h3>Exploratory Analysis</h3>
+            <p>Show correlation plots, distributions, model results, or insight callouts.</p>
+          </article>
+          <article class="visual-card">
+            <p class="project-meta">SQL Reporting</p>
+            <h3>KPI Report</h3>
+            <p>Highlight SQL queries that answer revenue, retention, quality, or operations questions.</p>
           </article>
         </div>
       </section>
 
       <section id="skills" class="section two-column">
         <div class="section-heading sticky-heading">
-          <p class="section-kicker">Capabilities</p>
-          <h2>Skills that make ideas shippable.</h2>
+          <p class="section-kicker">Skills</p>
+          <h2>Analytics skills organized by how businesses use them.</h2>
         </div>
         <div class="skill-list" aria-label="Skills">
           <div>
-            <h3>Strategy</h3>
-            <p>Research, product framing, user flows, content structure, prioritization.</p>
+            <h3>Business Analytics</h3>
+            <p>KPI reporting, dashboarding, storytelling, Excel, stakeholder communication.</p>
           </div>
           <div>
-            <h3>Design</h3>
-            <p>Interfaces, design systems, prototypes, responsive layouts, accessibility.</p>
+            <h3>Data</h3>
+            <p>SQL, Python, R, PostgreSQL, data cleaning, exploratory analysis.</p>
           </div>
           <div>
-            <h3>Development</h3>
-            <p>HTML, CSS, JavaScript, React-ready patterns, performance-minded builds.</p>
+            <h3>BI & Visualization</h3>
+            <p>Tableau, Power BI, charts, executive summaries, metric design.</p>
           </div>
           <div>
-            <h3>Delivery</h3>
-            <p>Documentation, handoff, testing, iteration, clear communication.</p>
+            <h3>ML / NLP</h3>
+            <p>Scikit-learn, TF-IDF, Naive Bayes, classification, LLM API evaluation.</p>
+          </div>
+          <div>
+            <h3>Cloud & Tools</h3>
+            <p>AWS, Git, GitHub, Jupyter, notebooks, reproducible analysis workflows.</p>
+          </div>
+          <div>
+            <h3>Communication</h3>
+            <p>Case studies, insight summaries, recommendations, data-backed decisions.</p>
           </div>
         </div>
       </section>
 
-      <section id="about" class="about band">
-        <div>
-          <p class="section-kicker">About</p>
-          <h2>A concise story about your path belongs here.</h2>
+      <section id="certifications" class="section credentials">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Certifications + Awards</p>
+            <h2>Proof points beyond project work.</h2>
+          </div>
         </div>
-        <p>
-          Share your background, what you are looking for next, and a few human details that make
-          you memorable. Mention your location, availability, education, or certifications if they
-          matter for your goals.
-        </p>
+        <div class="credential-grid">
+          <article>
+            <span>Award</span>
+            <h3>Best Visuals Award</h3>
+            <p>ASA DataFest recognition for clear and effective data visualization.</p>
+          </article>
+          <article>
+            <span>Certification</span>
+            <h3>Add Certification Name</h3>
+            <p>Replace with Google Data Analytics, AWS, Tableau, Microsoft, or another credential.</p>
+          </article>
+          <article>
+            <span>Education</span>
+            <h3>Data & Business Analytics</h3>
+            <p>Add your university, degree, graduation date, and relevant coursework.</p>
+          </article>
+        </div>
       </section>
 
       <section id="contact" class="section contact">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>Let's build something useful.</h2>
+          <h2>Let's turn data into a decision.</h2>
           <p>
-            Swap in your real email and social links below. You can also add a resume link once you
-            have a PDF ready.
+            Add your email, LinkedIn, GitHub, and resume link here so recruiters can move quickly.
           </p>
         </div>
         <div class="contact-actions" aria-label="Contact links">
-          <a class="button primary" href="mailto:sophia05@vt.edu">sophia05@vt.edu</a>
-          <a class="button secondary" href="https://www.linkedin.com/in/sophia-chukka-242aa8249/">LinkedIn</a>
+          <a class="button primary" href="mailto:hello@example.com">Email</a>
+          <a class="button secondary" href="#">LinkedIn</a>
           <a class="button secondary" href="https://github.com/sophiachukka">GitHub</a>
           <a class="button secondary" href="#">Resume</a>
         </div>
