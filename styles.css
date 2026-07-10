@@ -145,13 +145,40 @@ a {
   font-size: clamp(1.1rem, 2vw, 1.45rem);
 }
 
-.hero-actions,
 .contact-actions,
 .case-links {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 34px;
+}
+
+.about-section {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.about-grid article {
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.about-grid h3,
+.about-grid p {
+  margin: 0;
+}
+
+.about-grid p {
+  margin-top: 12px;
+  color: var(--muted);
 }
 
 .button {
@@ -223,6 +250,33 @@ h2 {
   gap: 14px;
 }
 
+.snapshot {
+  padding-top: clamp(46px, 6vw, 76px);
+  padding-bottom: clamp(46px, 6vw, 76px);
+}
+
+.snapshot-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.snapshot-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.snapshot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.metric-grid.compact {
+  gap: 10px;
+}
+
 .metric-card,
 .visual-card,
 .credential-grid article {
@@ -233,16 +287,16 @@ h2 {
 }
 
 .metric-card {
-  min-height: 170px;
+  min-height: 132px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 22px;
+  padding: 18px;
 }
 
 .metric-value {
   color: var(--teal);
-  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 850;
   line-height: 1;
 }
@@ -251,17 +305,51 @@ h2 {
 .case-content p,
 .case-content dd,
 .visual-card p,
-.skill-list p,
+.skill-category p,
 .credential-grid p,
 .contact p {
   color: var(--muted);
 }
 
 .project-section,
-.credentials {
+.credentials,
+.experience-section {
   background: var(--surface);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.timeline {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.26fr) minmax(0, 1fr);
+  gap: 22px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.timeline-date {
+  color: var(--teal);
+  font-weight: 850;
+}
+
+.timeline-content h3,
+.timeline-content ul {
+  margin: 0;
+}
+
+.timeline-content ul {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-left: 20px;
+  color: var(--muted);
 }
 
 .case-study-grid {
@@ -271,12 +359,23 @@ h2 {
 
 .case-card {
   display: grid;
-  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
-  min-height: 320px;
-  overflow: hidden;
+  grid-template-columns: 92px minmax(0, 1fr);
+  min-height: 0;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.case-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  margin: 24px 0 0 24px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--teal), var(--blue));
+  border-radius: 8px;
+  font-weight: 850;
 }
 
 .case-visual {
@@ -299,7 +398,7 @@ h2 {
 }
 
 .case-content {
-  padding: clamp(24px, 4vw, 38px);
+  padding: clamp(22px, 4vw, 34px);
 }
 
 .project-meta {
@@ -312,7 +411,7 @@ h2 {
 
 .case-content h3,
 .visual-card h3,
-.skill-list h3,
+.skill-category h3,
 .credential-grid h3 {
   margin: 0;
   font-size: 1.4rem;
@@ -351,6 +450,37 @@ dd {
 .case-links a {
   color: var(--teal);
   font-weight: 850;
+}
+
+.text-button {
+  padding: 0;
+  color: var(--teal);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 850;
+}
+
+.text-button:hover {
+  color: var(--coral);
+}
+
+.case-detail {
+  display: none;
+  margin-top: 18px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.case-detail.is-open {
+  display: block;
+}
+
+.case-detail p {
+  margin: 0;
 }
 
 .mini-bars {
@@ -485,7 +615,7 @@ dd {
   margin: 0;
 }
 
-.skill-list,
+.skill-board,
 .credential-grid {
   display: grid;
   gap: 1px;
@@ -493,7 +623,7 @@ dd {
   border: 1px solid var(--line);
 }
 
-.skill-list {
+.skill-board {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -501,16 +631,64 @@ dd {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.skill-list div,
+.skill-category,
 .credential-grid article {
-  min-height: 190px;
+  min-height: 186px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 26px;
+  gap: 18px;
   padding: 24px;
   background: var(--paper);
   box-shadow: none;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  position: relative;
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 11px;
+  color: var(--ink);
+  background: var(--surface);
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: help;
+}
+
+.skill-tag::after {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 10px);
+  z-index: 5;
+  width: min(280px, 78vw);
+  padding: 12px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  content: attr(data-skill);
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.skill-tag:hover::after,
+.skill-tag:focus::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .credential-grid span {
@@ -518,6 +696,23 @@ dd {
   font-size: 0.78rem;
   font-weight: 850;
   text-transform: uppercase;
+}
+
+.small-heading h2 {
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+}
+
+.credentials {
+  padding-top: clamp(48px, 6vw, 76px);
+  padding-bottom: clamp(48px, 6vw, 76px);
+}
+
+.credential-grid article {
+  min-height: 150px;
+}
+
+.credential-grid h3 {
+  font-size: 1.1rem;
 }
 
 .contact {
@@ -571,9 +766,14 @@ dd {
 
   .section-heading,
   .case-card,
+  .timeline-item,
   .two-column,
   .contact {
     grid-template-columns: 1fr;
+  }
+
+  .case-icon {
+    margin-bottom: 0;
   }
 
   .sticky-heading {
@@ -602,10 +802,17 @@ dd {
   .metric-grid,
   .visual-grid,
   .visual-card.wide,
-  .skill-list,
+  .skill-board,
   .credential-grid {
     grid-template-columns: 1fr;
     grid-column: auto;
+  }
+
+  .snapshot-header,
+  .snapshot-actions,
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   dl div {
@@ -621,7 +828,6 @@ dd {
     font-size: 0.7rem;
   }
 
-  .hero-actions,
   .contact-actions,
   .footer {
     align-items: stretch;
