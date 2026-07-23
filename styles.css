@@ -161,23 +161,6 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.about-heading {
-  grid-template-columns: 1fr;
-  margin-bottom: 22px;
-}
-
-.about-copy {
-  max-width: 980px;
-  margin-bottom: 28px;
-}
-
-.about-copy p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
